@@ -6,14 +6,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Clock, MapPin, ChevronDown, ChevronUp, Star, Music, Heart,
-  UtensilsCrossed, Volume2, Users, Brain, Accessibility, Info,
+  MapPin, ChevronDown, ChevronUp, Star, Music, Heart,
+  UtensilsCrossed, Users, Brain, Accessibility,
 } from "lucide-react";
 import { useAppContext } from "@/contexts/AppContext";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663687241893/XXZWs3abMYA25fSovCgD4y/caju-hero-GX2ajT8mYkDvixZcSsYr7M.webp";
 
-const bairros = ["Todos", "Atalaia", "Farolândia", "Santos Dumont", "Centro", "Bairro Industrial"];
+const eventos = [
+  { id: "Todos", label: "Todos", emoji: "🎶" },
+  { id: "Forró Caju", label: "Forró Caju", emoji: "🎸" },
+  { id: "Arraiá do Povo", label: "Arraiá do Povo", emoji: "🎪" },
+  { id: "Segundona do Turista", label: "Segundona", emoji: "🎵" },
+];
+
+const locais = ["Todos", "Atalaia", "Farolândia", "Santos Dumont", "Centro", "Bairro Industrial"];
 
 // Sugestões de pós-festa por bairro (dados locais representativos)
 const posFesta: Record<string, { nome: string; tipo: string; distancia: string; nota: string; emoji: string }[]> = {
@@ -129,6 +136,7 @@ const programacao = [
     lotacaoLabel: "Lotação alta",
     destaque: true,
     acessivel: true,
+    libras: true,
     cor: "orange",
     descricao: "Abertura do Forró Caju 2026 com Alceu Valença — lenda da MPB nordestina no Circuito Farolândia.",
     dicas: {
@@ -201,6 +209,7 @@ const programacao = [
     lotacaoLabel: "Lotação alta",
     destaque: true,
     acessivel: true,
+    libras: true,
     cor: "amber",
     descricao: "Encerramento do Circuito Farolândia com Elba Ramalho — ícone da cultura nordestina com forró, baião e MPB.",
     dicas: {
@@ -272,6 +281,7 @@ const programacao = [
     lotacaoLabel: "Lotação alta",
     destaque: true,
     acessivel: true,
+    libras: true,
     cor: "orange",
     descricao: "Um dos maiores shows do Forró Caju 2026 — Simone Mendes arrasta o público no coração de Aracaju.",
     dicas: {
@@ -344,6 +354,7 @@ const programacao = [
     lotacaoLabel: "Lotação alta",
     destaque: true,
     acessivel: true,
+    libras: true,
     cor: "amber",
     descricao: "Encerramento do 33º Forró Caju — Solange Almeida fecha com chave de ouro o maior evento municipal de Aracaju.",
     dicas: {
@@ -395,7 +406,7 @@ const cardBorderColors: Record<string, string> = {
 };
 
 function ShowCard({ show, isFav, onToggleFav }: {
-  show: typeof programacao[0];
+  show: typeof programacao[0] & { libras?: boolean };
   isFav: boolean;
   onToggleFav: () => void;
 }) {

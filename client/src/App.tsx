@@ -10,6 +10,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AppProvider } from "./contexts/AppContext";
+import { AccessibilityProvider, useAccessibility } from "./contexts/AccessibilityContext";
 import Home from "./pages/Home";
 import MapaPage from "./pages/MapaPage";
 import AcessibilidadePage from "./pages/AcessibilidadePage";
@@ -20,7 +21,8 @@ import BottomNav from "./components/BottomNav";
 import NotificationCenter from "./components/NotificationCenter";
 import { useAppContext } from "./contexts/AppContext";
 import { useTheme } from "./contexts/ThemeContext";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Accessibility } from "lucide-react";
+import { useLocation } from "wouter";
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -39,22 +41,60 @@ function ThemeToggle() {
   );
 }
 
+// Botão flutuante de atalho para acessibilidade
+function A11yShortcut() {
+  const [, navigate] = useLocation();
+  const { prefs } = useAccessibility();
+  const anyActive =
+    prefs.contraste !== "normal" ||
+    prefs.tamanhoFonte !== "normal" ||
+    prefs.espacamentoLetras ||
+    prefs.reduzirAnimacoes ||
+    prefs.audioAtivo;
+
+  return (
+    <button
+      onClick={() => navigate("/acessibilidade")}
+      aria-label="Abrir painel de acessibilidade"
+      title="Acessibilidade"
+      className="theme-toggle relative"
+      style={{
+        background: anyActive ? "rgba(232,82,26,0.15)" : undefined,
+        borderColor: anyActive ? "var(--primary)" : undefined,
+      }}
+    >
+      <Accessibility size={16} strokeWidth={2} />
+      {anyActive && (
+        <span
+          className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full"
+          style={{ background: "var(--primary)" }}
+          aria-label="Preferências de acessibilidade ativas"
+        />
+      )}
+    </button>
+  );
+}
+
 function RouterWithNotifications() {
   const { notifications, unreadCount, markAsRead, markAllAsRead, deleteNotification, clearAllNotifications } = useAppContext();
 
   return (
     <>
-      {/* Header com NotificationCenter e ThemeToggle */}
+      {/* Header */}
       <div
         className="fixed top-0 left-0 right-0 z-30"
         style={{ background: "var(--background)", backdropFilter: "blur(12px)" }}
       >
         <div className="bandeirola-line" />
         <div className="px-4 py-2.5 border-b border-border flex items-center justify-between">
-          <h1 className="text-lg font-bold" style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}>
+          <h1
+            className="text-lg font-bold"
+            style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}
+          >
             🎸 Caju Guide
           </h1>
           <div className="flex items-center gap-2">
+            <A11yShortcut />
             <ThemeToggle />
             <NotificationCenter
               notifications={notifications}
@@ -90,12 +130,14 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark" switchable={true}>
-        <AppProvider>
-          <TooltipProvider>
-            <Toaster />
-            <RouterWithNotifications />
-          </TooltipProvider>
-        </AppProvider>
+        <AccessibilityProvider>
+          <AppProvider>
+            <TooltipProvider>
+              <Toaster />
+              <RouterWithNotifications />
+            </TooltipProvider>
+          </AppProvider>
+        </AccessibilityProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

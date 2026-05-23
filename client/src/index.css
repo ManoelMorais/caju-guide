@@ -404,3 +404,92 @@
   }
 
 }
+
+  /* ═══════════════════════════════════════════════════════
+     ACESSIBILIDADE VISUAL — classes aplicadas no <html>
+     ═══════════════════════════════════════════════════════ */
+
+  /* ── Alto contraste ─────────────────────────────────── */
+  .a11y-alto-contraste {
+    --background: #000000 !important;
+    --foreground: #FFFFFF !important;
+    --card: #111111 !important;
+    --card-foreground: #FFFFFF !important;
+    --border: #FFFF00 !important;
+    --primary: #FFFF00 !important;
+    --primary-foreground: #000000 !important;
+    --muted-foreground: #EEEEEE !important;
+    --secondary: #1A1A1A !important;
+    --secondary-foreground: #FFFFFF !important;
+    --muted: #1A1A1A !important;
+    --input: #1A1A1A !important;
+    --accent: #FFFF00 !important;
+    --accent-foreground: #000000 !important;
+  }
+  .a11y-alto-contraste * {
+    border-color: #FFFF00 !important;
+  }
+  .a11y-alto-contraste button,
+  .a11y-alto-contraste [role="button"] {
+    outline: 2px solid #FFFF00 !important;
+    outline-offset: 2px !important;
+  }
+
+  /* ── Contraste invertido (útil para baixa visão) ─────── */
+  .a11y-invertido {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  .a11y-invertido img,
+  .a11y-invertido video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  /* ── Tamanho de fonte ───────────────────────────────── */
+  .a11y-fonte-grande {
+    font-size: 118% !important;
+  }
+  .a11y-fonte-grande * {
+    font-size: inherit;
+  }
+  .a11y-fonte-muito-grande {
+    font-size: 140% !important;
+  }
+  .a11y-fonte-muito-grande * {
+    font-size: inherit;
+  }
+
+  /* ── Espaçamento de letras ──────────────────────────── */
+  .a11y-espacamento,
+  .a11y-espacamento * {
+    letter-spacing: 0.08em !important;
+    word-spacing: 0.12em !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── Reduzir animações ──────────────────────────────── */
+  .a11y-reduzir-animacoes *,
+  .a11y-reduzir-animacoes *::before,
+  .a11y-reduzir-animacoes *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  /* ── Cursor grande ──────────────────────────────────── */
+  .a11y-cursor-grande,
+  .a11y-cursor-grande * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M8 4 L8 24 L13 19 L17 28 L20 27 L16 18 L23 18 Z' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E") 8 4, auto !important;
+  }
+
+  /* ── Sublinhar links ────────────────────────────────── */
+  .a11y-sublinhar-links a,
+  .a11y-sublinhar-links [role="link"] {
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+  }
+
+  /* ── Focus visible melhorado (sempre ativo) ─────────── */
+  :focus-visible {
+    outline: 3px solid var(--primary) !important;
+    outline-offset: 3px !important;
+  }

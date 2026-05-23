@@ -10,6 +10,7 @@ import {
   UtensilsCrossed, Users, Brain, Accessibility,
 } from "lucide-react";
 import { useAppContext } from "@/contexts/AppContext";
+import { useLocation } from "wouter";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663687241893/XXZWs3abMYA25fSovCgD4y/caju-hero-GX2ajT8mYkDvixZcSsYr7M.webp";
 
@@ -431,6 +432,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
   const [expandido, setExpandido] = useState(false);
   const [verPosShow, setVerPosShow] = useState(false);
   const posShowBairro = posFesta[show.bairro] || [];
+  const [, navigate] = useLocation();
 
   return (
     <motion.div
@@ -452,16 +454,29 @@ function ShowCard({ show, isFav, onToggleFav }: {
                 </span>
               )}
               {show.acessivel && (
-                <span className="badge badge--acessivel">♿ Acessível</span>
+                <button
+                  onClick={() => navigate("/acessibilidade?cat=mobilidade")}
+                  className="badge badge--acessivel"
+                  title="Ver recursos de mobilidade"
+                  aria-label="Ver recursos de acessibilidade para mobilidade"
+                >
+                  ♿ Acessível
+                </button>
               )}
               {"libras" in show && show.libras && (
-                <span className="badge" style={{ background: "rgba(59,130,246,0.15)", color: "#3B82F6" }}>
+                <button
+                  onClick={() => navigate("/acessibilidade?cat=auditiva")}
+                  className="badge"
+                  style={{ background: "rgba(59,130,246,0.15)", color: "#3B82F6" }}
+                  title="Ver recursos para deficiência auditiva e Libras"
+                  aria-label="Ver recursos de Libras e deficiência auditiva"
+                >
                   🤟 Libras
-                </span>
+                </button>
               )}
             </div>
             <h3 className="text-base font-bold leading-tight"
-                style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}>
+              style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}>
               {show.artista}
             </h3>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted-foreground)" }}>
@@ -530,7 +545,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
 
               {/* Dicas neurodivergência */}
               <div className="rounded-xl p-3 space-y-2"
-                   style={{ background: "rgba(107,79,160,0.08)", border: "1px solid rgba(107,79,160,0.2)" }}>
+                style={{ background: "rgba(107,79,160,0.08)", border: "1px solid rgba(107,79,160,0.2)" }}>
                 <div className="flex items-center gap-2 mb-2">
                   <Brain size={14} style={{ color: "#A78BCA" }} />
                   <span className="text-xs font-semibold" style={{ color: "#A78BCA" }}>
@@ -540,14 +555,14 @@ function ShowCard({ show, isFav, onToggleFav }: {
                 {show.dicas.neuro.map((dica, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
-                         style={{ background: "#7B5CB8" }} />
+                      style={{ background: "#7B5CB8" }} />
                     <span className="text-xs leading-relaxed" style={{ color: "var(--foreground)" }}>
                       {dica}
                     </span>
                   </div>
                 ))}
                 <div className="flex items-center gap-1.5 mt-2 pt-2"
-                     style={{ borderTop: "1px solid rgba(107,79,160,0.15)" }}>
+                  style={{ borderTop: "1px solid rgba(107,79,160,0.15)" }}>
                   <Users size={11} className="label-muted" />
                   <span className="text-[11px] label-muted">Capacidade: {show.dicas.capacidade}</span>
                 </div>
@@ -584,7 +599,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
                         <div className="mt-2 space-y-2">
                           {posShowBairro.map((local, i) => (
                             <div key={i} className="flex items-center gap-3 p-2.5 rounded-xl"
-                                 style={{ background: "var(--secondary)", border: "1px solid var(--border)" }}>
+                              style={{ background: "var(--secondary)", border: "1px solid var(--border)" }}>
                               <span className="text-base">{local.emoji}</span>
                               <div className="flex-1 min-w-0">
                                 <p className="text-xs font-semibold" style={{ color: "var(--foreground)" }}>
@@ -595,7 +610,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
                                 </p>
                               </div>
                               <span className="text-[11px] font-bold flex-shrink-0"
-                                    style={{ color: "#E8521A" }}>
+                                style={{ color: "#E8521A" }}>
                                 ⭐ {local.nota}
                               </span>
                             </div>
@@ -620,6 +635,7 @@ export default function Home() {
   const [apenasAcessivel, setApenasAcessivel] = useState(false);
   const [apenasBaixaEstimulacao, setApenasBaixaEstimulacao] = useState(false);
   const { isFavorito, toggleFavorito, addNotification, marcarComoNotificado, favoritos } = useAppContext();
+  const [, navigate] = useLocation();
 
   useEffect(() => {
     const naoNotificados = favoritos.filter((fav) => !fav.notificadoAntes);
@@ -664,7 +680,7 @@ export default function Home() {
             </span>
           </div>
           <h1 className="text-3xl font-bold text-white leading-tight"
-              style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}>
+            style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}>
             Forró Caju 2026
           </h1>
           <p className="text-white/75 text-sm mt-0.5">
@@ -730,14 +746,19 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-3 p-3 rounded-xl flex items-start gap-2"
+          className="mb-3 p-3 rounded-xl flex items-start gap-2 cursor-pointer"
           style={{ background: "rgba(107,79,160,0.08)", border: "1px solid rgba(107,79,160,0.2)" }}
+          onClick={() => navigate("/acessibilidade?cat=neuro")}
+          role="button"
+          aria-label="Ver guia completo para neurodivergentes"
+          title="Ver guia completo"
         >
           <Brain size={14} style={{ color: "#A78BCA", flexShrink: 0, marginTop: 2 }} />
           <p className="text-xs leading-relaxed label-muted">
             <strong style={{ color: "#A78BCA" }}>Neurodivergência & Autismo:</strong>{" "}
             Expanda cada card para ver dicas de volume, lotação e estimulação sensorial. Use o filtro{" "}
-            <span className="font-semibold">🧠 Tranquilo</span> para shows de baixa estimulação.
+            <span className="font-semibold">🧠 Tranquilo</span> para shows de baixa estimulação.{" "}
+            <span style={{ color: "#A78BCA", fontWeight: 600 }}>Ver guia completo →</span>
           </p>
         </motion.div>
 

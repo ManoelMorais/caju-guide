@@ -1,0 +1,801 @@
+{
+  "meta": {
+    "versao": "1.0.0",
+    "gerado_em": "2026-05-23",
+    "fonte": "Governo do Estado de Sergipe / Prefeitura de Aracaju / G1 SE",
+    "descricao_geral": "Arquivo de dados das festividades juninas de Aracaju, Sergipe, estruturado para consumo via API.",
+    "licenca": "Dados de domínio público coletados de fontes oficiais"
+  },
+  "cidade": {
+    "nome": "Aracaju",
+    "estado": "Sergipe",
+    "pais": "Brasil",
+    "regiao": "Nordeste",
+    "latitude": -10.9472,
+    "longitude": -37.0731,
+    "apelido": "País do Forró",
+    "descricao": "Capital do estado de Sergipe e epicentro das festividades juninas do Nordeste. Aracaju é reconhecida como o 'País do Forró', realizando 60 dias ininterruptos de festejos juninos à beira-mar, na Orla da Atalaia."
+  },
+  "ciclo_junino": {
+    "ano": 2026,
+    "inicio": "2026-05-18",
+    "encerramento": "2026-07-26",
+    "duracao_dias": 60,
+    "descricao": "O ciclo junino de Aracaju e Sergipe é um dos mais longos e completos do Brasil, com mais de 300 atrações distribuídas em eventos públicos e gratuitos ao longo de dois meses.",
+    "orgaos_realizadores": [
+      {
+        "nome": "Governo do Estado de Sergipe",
+        "secretaria": "Fundação de Cultura e Arte Aperipê (FUNCAP)",
+        "site": "https://sergipepaisdoforro.com.br"
+      },
+      {
+        "nome": "Prefeitura de Aracaju",
+        "secretaria": "Fundação Cultural Cidade de Aracaju (FUNCAJU)",
+        "site": "https://www.aracaju.se.gov.br"
+      }
+    ]
+  },
+  "eventos": [
+    {
+      "id": "arraia_do_povo_2026",
+      "nome": "Arraiá do Povo",
+      "edicao": 2026,
+      "tipo": "Festival Musical e Cultural",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Orla da Atalaia",
+        "bairro": "Atalaia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "latitude": -10.9982,
+        "longitude": -37.0489,
+        "descricao": "A Orla da Atalaia é considerada uma das orlas mais bem equipadas do Brasil, às margens do Oceano Atlântico."
+      },
+      "data_inicio": "2026-05-29",
+      "data_fim": "2026-06-28",
+      "horario": "A partir das 17h",
+      "entrada": "Gratuita",
+      "descricao": "O Arraiá do Povo é o maior evento junino à beira-mar do Brasil, realizado anualmente na Orla da Atalaia, em Aracaju. Com 30 dias de programação, reúne artistas locais, regionais e nacionais em diferentes palcos, além de gastronomia típica, artesanato e apresentações culturais.",
+      "palcos": [
+        {
+          "nome": "Palco Rogério",
+          "descricao": "Palco principal com grandes atrações nacionais e regionais"
+        },
+        {
+          "nome": "Palco 360°",
+          "descricao": "Palco secundário com artistas locais e revelações"
+        }
+      ],
+      "programacao": [
+        {
+          "data": "2026-05-29",
+          "dia_semana": "Sexta-feira",
+          "palco_principal": ["Fogo na Saia", "Seu Desejo", "Calcinha Preta 'Atemporal'"],
+          "palco_360": ["Chirlys Trindade"]
+        },
+        {
+          "data": "2026-05-30",
+          "dia_semana": "Sábado",
+          "palco_principal": ["Forró Brasil", "Adelmário Coelho", "Kátia e Aduílio", "Joelma"],
+          "palco_360": ["Forró 10"]
+        },
+        {
+          "data": "2026-05-31",
+          "dia_semana": "Domingo",
+          "palco_principal": ["Cintura Fina", "Baby Som", "Henry Freitas"],
+          "palco_360": ["Zé Tramela"]
+        },
+        {
+          "data": "2026-06-02",
+          "dia_semana": "Terça-feira",
+          "palco_principal": ["Leone O Nobre", "Thiago Aquino", "Natanzinho Lima"],
+          "palco_360": ["Ittauan"]
+        },
+        {
+          "data": "2026-06-03",
+          "dia_semana": "Quarta-feira",
+          "palco_principal": ["As Patricinhas", "Cavalo de Pau", "Gustavo Mioto"],
+          "palco_360": ["Jan Vaqueiro"]
+        },
+        {
+          "data": "2026-06-04",
+          "dia_semana": "Quinta-feira",
+          "palco_principal": ["Jeanny Lins", "Walkyria Santos", "Ana Castela"],
+          "palco_360": ["Alê Ferraz"]
+        },
+        {
+          "data": "2026-06-05",
+          "dia_semana": "Sexta-feira",
+          "palco_principal": ["Geninho Batalha", "Jonas Esticado", "Iguinho e Lulinha", "Ávine Vinny"],
+          "palco_360": ["André Novaes"]
+        },
+        {
+          "data": "2026-06-06",
+          "dia_semana": "Sábado",
+          "palco_principal": ["Zueirões do Forró", "Guilherme Dantas", "Duas Paixões (Silvânia e Berg)", "Tarcísio do Acordeon"],
+          "palco_360": ["Dudu Moral"]
+        },
+        {
+          "data": "2026-06-07",
+          "dia_semana": "Domingo",
+          "palco_principal": ["Flor de Maracujá", "Dorgival Dantas", "Magníficos"],
+          "palco_360": ["Elton Mota"]
+        },
+        {
+          "data": "2026-06-09",
+          "dia_semana": "Terça-feira",
+          "palco_principal": ["Unha Pintada", "Devinho Novaes", "Mikael Santos"],
+          "palco_360": ["Eve Sandes"]
+        },
+        {
+          "data": "2026-06-10",
+          "dia_semana": "Quarta-feira",
+          "palco_principal": ["Igor Ativado", "João Gomes", "Nattan"],
+          "palco_360": ["Alisson Lima"]
+        },
+        {
+          "data": "2026-06-11",
+          "dia_semana": "Quinta-feira",
+          "palco_principal": ["Nineia Oliveira", "Samyra Show", "Simone Mendes"],
+          "palco_360": ["Larissa Costa"]
+        },
+        {
+          "data": "2026-06-12",
+          "dia_semana": "Sexta-feira",
+          "palco_principal": ["Quarto de Milha", "Falamansa", "Zé Vaqueiro", "Gil Mendes"],
+          "palco_360": ["Netto Ventura"]
+        },
+        {
+          "data": "2026-06-13",
+          "dia_semana": "Sábado",
+          "palco_principal": ["Mastruz com Leite", "Raí Saia Rodada", "Nuzio Medeiros"],
+          "palco_360": ["Cartas de Tarô"],
+          "observacao": "Transmissão do jogo do Brasil"
+        },
+        {
+          "data": "2026-06-14",
+          "dia_semana": "Domingo",
+          "palco_principal": ["Erivaldo de Carira", "Batista Lima", "Zé Cantor"],
+          "palco_360": ["Raio da Silibrina"]
+        },
+        {
+          "data": "2026-06-16",
+          "dia_semana": "Terça-feira",
+          "palco_principal": ["Nadson o Ferinha", "Silvano Sales", "Heitor Costa"],
+          "palco_360": ["Heitor Santos"]
+        },
+        {
+          "data": "2026-06-17",
+          "dia_semana": "Quarta-feira",
+          "palco_principal": ["Raniere Gomes", "Cavaleiros do Forró", "Limão com Mel"],
+          "palco_360": ["Vanessa Porto"]
+        },
+        {
+          "data": "2026-06-18",
+          "dia_semana": "Quinta-feira",
+          "palco_principal": ["Ju Marques", "Solange Almeida", "Fernandinha"],
+          "palco_360": ["Bia Brasil"]
+        },
+        {
+          "data": "2026-06-19",
+          "dia_semana": "Sexta-feira",
+          "palco_principal": ["Luan Estilizado", "Luan Santana", "João Bosco e Vinicius"],
+          "palco_360": ["Ygor Raniere"],
+          "observacao": "Transmissão do jogo do Brasil"
+        },
+        {
+          "data": "2026-06-20",
+          "dia_semana": "Sábado",
+          "palco_principal": ["Maraisa Cantora", "Brasas do Forró", "Yasmin Sensação", "Filho do Piseiro"],
+          "palco_360": ["Lucas Castro"]
+        },
+        {
+          "data": "2026-06-21",
+          "dia_semana": "Domingo",
+          "palco_principal": ["Marcelo Bala", "Claudio Ney e Juliana", "Gusttavo Lima"],
+          "palco_360": ["Franquinho Vaqueiro"]
+        },
+        {
+          "data": "2026-06-23",
+          "dia_semana": "Terça-feira",
+          "palco_principal": ["Luanzinho Moraes", "Fabiano Guimarães", "Rey Vaqueiro", "Painel de Controle"],
+          "palco_360": ["Marcelinho"]
+        },
+        {
+          "data": "2026-06-24",
+          "dia_semana": "Quarta-feira",
+          "palco_principal": ["Alcymar Monteiro", "Geraldo Azevedo", "Matheus e Kauan"],
+          "palco_360": ["Danielzinho Jr"],
+          "observacao": "Transmissão do jogo do Brasil. Dia de São João — data mais importante do ciclo junino."
+        },
+        {
+          "data": "2026-06-25",
+          "dia_semana": "Quinta-feira",
+          "palco_principal": ["Liene Show", "Taty Girl", "Lauana Prado"],
+          "palco_360": ["Tatah Santana"]
+        },
+        {
+          "data": "2026-06-26",
+          "dia_semana": "Sexta-feira",
+          "palco_principal": ["Danielzinho o Kaceteiro", "Eline Martins", "Diego e Victor Hugo", "Vitor Fernandes"],
+          "palco_360": ["Breno Matos"]
+        },
+        {
+          "data": "2026-06-27",
+          "dia_semana": "Sábado",
+          "palco_principal": ["Cuscuz com Leite", "Zezo", "Bruno e Marrone", "Klessinha"],
+          "palco_360": ["Gardênia Mel"]
+        },
+        {
+          "data": "2026-06-28",
+          "dia_semana": "Domingo",
+          "palco_principal": ["Pedro Lua", "Elba Ramalho", "Flávio José", "Mestrinho"],
+          "palco_360": ["Forró Cana com Limão"],
+          "observacao": "Encerramento do Arraiá do Povo 2026"
+        }
+      ],
+      "impacto": {
+        "edicoes_anteriores": "Evento realizado anualmente há mais de 20 anos",
+        "publico_estimado": "Centenas de milhares de pessoas ao longo dos 30 dias",
+        "turismo": "Atrai turistas de todo o Brasil e do exterior"
+      }
+    },
+    {
+      "id": "vila_do_forro_2026",
+      "nome": "Vila do Forró",
+      "edicao": 2026,
+      "tipo": "Espaço Cultural Temático",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Orla da Atalaia",
+        "bairro": "Atalaia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "latitude": -10.9982,
+        "longitude": -37.0489
+      },
+      "data_inicio": "2026-05-29",
+      "data_fim": "2026-07-26",
+      "entrada": "Gratuita",
+      "descricao": "A Vila do Forró é uma cidade cenográfica instalada na Orla da Atalaia que funciona como espaço de gastronomia típica junina, artesanato, música ao vivo e tradições culturais. Funciona concomitantemente ao Arraiá do Povo e se estende por mais um mês após o seu encerramento, até o dia 26 de julho.",
+      "atracoes": [
+        "Barracas de comidas típicas juninas",
+        "Artesanato sergipano",
+        "Apresentações de trios pé de serra",
+        "Shows musicais",
+        "Duelo Final de Quadrilhas (02 de julho)"
+      ],
+      "eventos_especiais": [
+        {
+          "nome": "Duelo Final de Quadrilhas",
+          "data": "2026-07-02",
+          "descricao": "Grande final dos concursos de quadrilhas juninas, reunindo os melhores grupos do estado."
+        }
+      ]
+    },
+    {
+      "id": "forro_caju_2026",
+      "nome": "Forró Caju",
+      "edicao_numero": 33,
+      "edicao": 2026,
+      "tipo": "Festival Musical",
+      "organizador": "Prefeitura de Aracaju / FUNCAJU",
+      "circuitos": [
+        {
+          "nome": "Circuito Farolândia",
+          "local": {
+            "nome": "Praça Acrísio Garcez",
+            "bairro": "Farolândia (Conjunto Augusto Franco)",
+            "cidade": "Aracaju",
+            "estado": "Sergipe"
+          },
+          "datas": ["2026-06-04", "2026-06-05", "2026-06-06"],
+          "programacao": [
+            {
+              "data": "2026-06-04",
+              "dia_semana": "Quinta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Casaca de Couro"},
+                {"horario": "20:30", "artista": "Trio Nordestino"},
+                {"horario": "22:00", "artista": "Fulô de Mandacaru"},
+                {"horario": "23:30", "artista": "Alceu Valença"},
+                {"horario": "01:00", "artista": "João da Passarada"}
+              ]
+            },
+            {
+              "data": "2026-06-05",
+              "dia_semana": "Sexta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Sergival"},
+                {"horario": "20:30", "artista": "Sérgio Lucas"},
+                {"horario": "22:00", "artista": "Flávio José"},
+                {"horario": "23:30", "artista": "Adelmário Coelho"},
+                {"horario": "01:00", "artista": "Targino Gondim"}
+              ]
+            },
+            {
+              "data": "2026-06-06",
+              "dia_semana": "Sábado",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Héloa"},
+                {"horario": "20:30", "artista": "Santana O Cantador"},
+                {"horario": "22:00", "artista": "Elba Ramalho"},
+                {"horario": "23:30", "artista": "Geraldo Azevedo"},
+                {"horario": "01:00", "artista": "Pedro Lua"}
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Circuito Santos Dumont",
+          "local": {
+            "nome": "Praça Ulisses Guimarães",
+            "bairro": "Santos Dumont",
+            "cidade": "Aracaju",
+            "estado": "Sergipe"
+          },
+          "datas": ["2026-06-12", "2026-06-13"],
+          "programacao": [
+            {
+              "data": "2026-06-12",
+              "dia_semana": "Sexta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Lara Amélia"},
+                {"horario": "20:30", "artista": "Anastácia"},
+                {"horario": "22:00", "artista": "Waldonys"},
+                {"horario": "23:30", "artista": "Xotebaião"},
+                {"horario": "01:00", "artista": "Thaís Nogueira"}
+              ]
+            },
+            {
+              "data": "2026-06-13",
+              "dia_semana": "Sábado",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "20:30", "artista": "Flávio Leandro"},
+                {"horario": "22:00", "artista": "Del Feliz"},
+                {"horario": "23:30", "artista": "Jorge de Altinho"},
+                {"horario": "01:00", "artista": "Luiz Fontineli"},
+                {"horario": "02:00", "artista": "Mimi do Acordeon"}
+              ],
+              "observacao": "Transmissão do jogo Brasil x Marrocos"
+            }
+          ]
+        },
+        {
+          "nome": "Circuito Praça dos Mercados",
+          "local": {
+            "nome": "Praça Hilton Lopes (Praça dos Mercados Centrais)",
+            "bairro": "Centro",
+            "cidade": "Aracaju",
+            "estado": "Sergipe"
+          },
+          "palcos": ["Palco Gerson Filho", "Palco Luiz Gonzaga"],
+          "datas": ["2026-06-20", "2026-06-21", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-27", "2026-06-28"],
+          "programacao": [
+            {
+              "data": "2026-06-20",
+              "dia_semana": "Sábado",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Lourinho do Acordeon"},
+                {"horario": "20:40", "artista": "Taty Girl"},
+                {"horario": "22:20", "artista": "Joelma"},
+                {"horario": "23:30", "artista": "Matheus Fernandes"},
+                {"horario": "01:40", "artista": "Tatah Santana"}
+              ]
+            },
+            {
+              "data": "2026-06-21",
+              "dia_semana": "Domingo",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Igor Ranieri"},
+                {"horario": "20:40", "artista": "Léo Foguete"},
+                {"horario": "22:20", "artista": "Mikael Santos"},
+                {"horario": "00:00", "artista": "Yasmin Sensação"}
+              ]
+            },
+            {
+              "data": "2026-06-22",
+              "dia_semana": "Segunda-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Mariana Fagundes"},
+                {"horario": "20:40", "artista": "Fernandinha"},
+                {"horario": "22:20", "artista": "Diego e Victor Hugo"},
+                {"horario": "00:00", "artista": "Cidade dos Anjos"}
+              ]
+            },
+            {
+              "data": "2026-06-23",
+              "dia_semana": "Terça-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Baú das Antigas"},
+                {"horario": "20:40", "artista": "Silvânia Aquino e Berg Rabelo"},
+                {"horario": "22:20", "artista": "Panda"},
+                {"horario": "00:00", "artista": "Simone Mendes"},
+                {"horario": "01:40", "artista": "Xande e Nanda"}
+              ]
+            },
+            {
+              "data": "2026-06-24",
+              "dia_semana": "Quarta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "20:40", "artista": "Zé Vaqueiro"},
+                {"horario": "22:20", "artista": "Seu Desejo"},
+                {"horario": "00:00", "artista": "Natanzinho Lima"},
+                {"horario": "01:40", "artista": "Gil Mendes"}
+              ],
+              "observacao": "Dia de São João. Transmissão do jogo da Seleção Brasileira."
+            },
+            {
+              "data": "2026-06-25",
+              "dia_semana": "Quinta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Erivaldo de Carira"},
+                {"horario": "20:40", "artista": "Mestrinho"},
+                {"horario": "22:20", "artista": "Pablo"},
+                {"horario": "00:00", "artista": "Calcinha Preta"}
+              ]
+            },
+            {
+              "data": "2026-06-26",
+              "dia_semana": "Sexta-feira",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Dedé Brasil"},
+                {"horario": "20:40", "artista": "Dorgival Dantas"},
+                {"horario": "22:20", "artista": "Murilo Huff"},
+                {"horario": "00:00", "artista": "Magníficos"}
+              ]
+            },
+            {
+              "data": "2026-06-27",
+              "dia_semana": "Sábado",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Luciene Melo"},
+                {"horario": "20:40", "artista": "Eric Land"},
+                {"horario": "22:20", "artista": "Wesley Safadão"},
+                {"horario": "00:00", "artista": "Mastruz com Leite"},
+                {"horario": "01:30", "artista": "Alisson Lima"}
+              ]
+            },
+            {
+              "data": "2026-06-28",
+              "dia_semana": "Domingo",
+              "horario_inicio": "19:00",
+              "atracoes": [
+                {"horario": "19:00", "artista": "Antônio Carlos do Aracaju"},
+                {"horario": "20:40", "artista": "Limão com Mel"},
+                {"horario": "22:20", "artista": "Solange Almeida"},
+                {"horario": "00:00", "artista": "Danielzinho Jr."}
+              ],
+              "observacao": "Encerramento do Forró Caju 2026"
+            }
+          ]
+        }
+      ],
+      "forum_do_forro": {
+        "descricao": "Evento pré-junino de debate e valorização da cultura do forró, realizado no Teatro Atheneu e na Unit Farolândia.",
+        "programacao": [
+          {
+            "data": "2026-05-11",
+            "local": "Teatro Atheneu",
+            "horario": "18:00",
+            "tema": "Homenagem a Flávio José — 'Cancioneiro de Resistência: a obra de Flávio José como pilar do forró tradicional nordestino'"
+          },
+          {
+            "data": "2026-05-12",
+            "local": "Unit Farolândia — Auditório Bloco D",
+            "programacao_detalhada": [
+              {
+                "horario": "15:00",
+                "tema": "8 Baixos: A Origem do Forró",
+                "debatedores": ["Luizinho Calixto (PB)", "Robertinho dos 8 Baixos (SE)"]
+              },
+              {
+                "horario": "16:30",
+                "tema": "Sergival e as Coisas do Caçuá",
+                "debatedores": ["Sergival (SE)"]
+              },
+              {
+                "horario": "19:00",
+                "tipo": "Apresentações artísticas",
+                "artistas": ["Robertinho dos 8 Baixos", "Orquestra Sanfônica de 8 Baixos de Santa Cruz do Capibaribe", "Sergival"]
+              }
+            ]
+          }
+        ]
+      },
+      "entrada": "Gratuita",
+      "descricao": "O Forró Caju é um dos maiores e mais tradicionais festejos juninos do Brasil, celebrando 33 anos em 2026. Promovido pela Prefeitura de Aracaju, conta com 109 atrações musicais, sendo 67% artistas sergipanos. O evento é descentralizado em três circuitos, levando a festa a diferentes bairros da cidade.",
+      "impacto_economico": {
+        "edicao_2025": {
+          "publico": "350.000 pessoas",
+          "aumento_arrecadacao": "12,5%",
+          "acrescimo_tributos": "R$ 72 milhões",
+          "postos_trabalho_gerados": 1028
+        }
+      }
+    },
+    {
+      "id": "segundona_do_turista_2026",
+      "nome": "Segundona do Turista",
+      "tipo": "Evento Semanal Cultural",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Rua São João",
+        "bairro": "Bairro Industrial",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "descricao": "A Rua São João é um patrimônio histórico, cultural e imaterial de Aracaju, com mais de 114 anos de tradição junina, reconhecida por lei municipal em 2018."
+      },
+      "periodicidade": "Semanal (todas as segundas-feiras)",
+      "data_inicio": "2026-05-18",
+      "data_fim": "2026-12-31",
+      "horario": "A partir das 18h",
+      "entrada": "Gratuita",
+      "descricao": "A Segundona do Turista é realizada todas as segundas-feiras na histórica Rua São João, no Bairro Industrial, com shows musicais de artistas locais, apresentações de quadrilhas juninas e grupos folclóricos, além de barracas de comidas típicas e artesanato. A iniciativa é do Governo do Estado por meio da FUNCAP, com parceria do Centro Social e Cultural São João de Deus.",
+      "atracoes_tipicas": [
+        "Shows de forró pé de serra",
+        "Apresentações de quadrilhas juninas",
+        "Grupos folclóricos e parafolclóricos",
+        "Barracas de comidas típicas",
+        "Artesanato sergipano"
+      ],
+      "historico_rua_sao_joao": {
+        "ano_fundacao_festejos": 1910,
+        "origem": "Os festejos na Rua São João tiveram início com duas irmãs devotas de uma imagem de São João de Deus, que realizavam novenas com os moradores locais. Com o tempo, a festa foi crescendo e incorporando elementos profanos como a dança, a alimentação e o forró.",
+        "patrimonio": "Reconhecida como Patrimônio Histórico, Cultural e Imaterial de Aracaju pelo Projeto de Lei 215/2017, aprovado em 2018.",
+        "gestao": "Centro Cultural João de Deus, com eleições a cada 4 anos entre os moradores da região."
+      }
+    },
+    {
+      "id": "salva_junina_2026",
+      "nome": "Salva Junina",
+      "tipo": "Abertura Oficial do Ciclo Junino",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Complexo Cultural Gonzagão",
+        "bairro": "Farolândia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "observacao": "Em edições anteriores, realizada no Centro de Criatividade 'Governador João Alves Filho', no Bairro Cirurgia."
+      },
+      "data": "2026-05-28",
+      "horario": "19:00",
+      "entrada": "Gratuita",
+      "descricao": "A Salva Junina é o evento que marca o início oficial do ciclo junino em Sergipe. Reúne apresentações de grupos folclóricos, quadrilhas juninas campeãs dos concursos do ano anterior, espetáculo teatral 'Ópera do Milho' do grupo Imbuaça, e a tradicional coroação do Rei e Rainha do 'País do Forró'. Também inclui a apresentação do Barco de Fogo de Estância.",
+      "atrações_tipicas": [
+        "Apresentação do grupo Peneirou Xerém (patrimônio cultural imaterial de Aracaju)",
+        "Quadrilhas juninas campeãs do ano anterior",
+        "Espetáculo 'Ópera do Milho' — Grupo Imbuaça",
+        "Coroação do Rei e Rainha do País do Forró",
+        "Apresentação do Barco de Fogo de Estância"
+      ]
+    },
+    {
+      "id": "concurso_quadrilhas_gonzagao_2026",
+      "nome": "Concurso de Quadrilhas Juninas do Gonzagão",
+      "tipo": "Competição Cultural",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Complexo Cultural Gonzagão",
+        "bairro": "Farolândia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "descricao": "Espaço cultural reinaugurado em 2025, moderno e instagramável, dedicado à cultura junina sergipana."
+      },
+      "data_inicio": "2026-06-08",
+      "data_fim": "2026-06-15",
+      "entrada": "Gratuita",
+      "descricao": "Um dos concursos de quadrilhas juninas mais tradicionais e aguardados de Sergipe, realizado no Complexo Cultural Gonzagão. Reúne grupos filiados à LIQUAJUSE (Liga das Quadrilhas Juninas de Aracaju e Sergipe) em noites de competição com figurinos elaborados, coreografias e muita animação.",
+      "organizacao_quadrilhas": {
+        "nome": "LIQUAJUSE",
+        "descricao": "Liga das Quadrilhas Juninas de Aracaju e Sergipe, com mais de 34 grupos filiados, dedicada a preservar e valorizar o movimento junino sergipano.",
+        "site": "https://liquajuse.com"
+      }
+    },
+    {
+      "id": "concurso_quadrilhas_arranca_unha_2026",
+      "nome": "Concurso de Quadrilhas Juninas do Arranca Unha",
+      "tipo": "Competição Cultural",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Centro de Criatividade 'Governador João Alves Filho'",
+        "bairro": "Cirurgia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe"
+      },
+      "data_inicio": "2026-06-22",
+      "data_fim": "2026-06-28",
+      "entrada": "Gratuita",
+      "descricao": "Tradicional concurso de quadrilhas juninas realizado na Concha Acústica do Centro de Criatividade. Junto ao Concurso do Gonzagão, é um dos principais palcos para as quadrilhas juninas de Sergipe. O Duelo Final, com os campeões dos dois concursos, acontece em 2 de julho na Vila do Forró."
+    },
+    {
+      "id": "arrastape_18_forte_2026",
+      "nome": "Arrastapé do 18 do Forte",
+      "tipo": "Festa Junina de Bairro",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP (Encontro Nordestino de Cultura)",
+      "local": {
+        "nome": "Baixa da Cachorrinha",
+        "bairro": "18 do Forte",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "descricao": "Localizado na Zona Norte de Aracaju."
+      },
+      "data_inicio": "2026-06-12",
+      "data_fim": "2026-06-13",
+      "entrada": "Gratuita",
+      "descricao": "Considerado o maior São João de bairro de Aracaju, o Arrastapé do 18 do Forte foi idealizado em 2008 pelo então deputado federal Fábio Mitidieri. Integra o Encontro Nordestino de Cultura, projeto da FUNCAP, e conta com diversas atrações locais e nacionais.",
+      "historico": {
+        "ano_fundacao": 2008,
+        "fundador": "Fábio Mitidieri (então deputado federal, atual governador de Sergipe)",
+        "reconhecimento": "Considerado o maior São João de bairro de Aracaju desde 2019"
+      }
+    },
+    {
+      "id": "arrasta_fe_2026",
+      "nome": "Arrasta Fé",
+      "tipo": "Festival Religioso Junino",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Orla da Atalaia",
+        "bairro": "Atalaia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe",
+        "latitude": -10.9982,
+        "longitude": -37.0489
+      },
+      "data_inicio": "2026-07-10",
+      "data_fim": "2026-07-12",
+      "horario": "A partir das 18h",
+      "entrada": "Gratuita",
+      "descricao": "O Arrasta Fé encerra a programação dos grandes eventos do ciclo junino em Sergipe. Criado em 2025 pelo Governo do Estado, é dedicado às manifestações religiosas que comemoram o São João com música, devoção e alegria. Reúne artistas da música religiosa católica e cristã.",
+      "programacao": [
+        {
+          "data": "2026-07-10",
+          "dia_semana": "Sexta-feira",
+          "atracoes_palco_principal": ["Ministério Rebanhão e Carlinhos Félix", "Maria Marçal", "Preto no Branco"],
+          "palco_360": ["Renovart Banda"]
+        },
+        {
+          "data": "2026-07-11",
+          "dia_semana": "Sábado",
+          "atracoes_palco_principal": ["William Sanfona", "Padre Fábio de Melo", "Mano Walter"],
+          "palco_360": ["Diácono Rômulo"]
+        },
+        {
+          "data": "2026-07-12",
+          "dia_semana": "Domingo",
+          "atracoes_palco_principal": ["Afoxé de Preto", "Joia do Couro", "Rita Benneditto"],
+          "palco_360": ["Patota do Zé"]
+        }
+      ],
+      "historico": {
+        "primeira_edicao": 2025,
+        "descricao": "Criado em 2025 como o primeiro evento dedicado às manifestações religiosas do ciclo junino em Sergipe."
+      }
+    },
+    {
+      "id": "apaga_fogueira_2026",
+      "nome": "Apaga Fogueira",
+      "tipo": "Encerramento Oficial do Ciclo Junino",
+      "organizador": "Governo do Estado de Sergipe / FUNCAP",
+      "local": {
+        "nome": "Vila do Forró — Orla da Atalaia",
+        "bairro": "Atalaia",
+        "cidade": "Aracaju",
+        "estado": "Sergipe"
+      },
+      "data": "2026-07-26",
+      "horario": "21:00",
+      "entrada": "Gratuita",
+      "descricao": "O Apaga Fogueira é o evento de encerramento oficial do ciclo junino de 60 dias de Sergipe, realizado na Vila do Forró, na Orla da Atalaia. Simboliza o fim das festividades juninas do ano."
+    }
+  ],
+  "cultura_e_tradicao": {
+    "historia": {
+      "origem_festas_juninas": "As festas juninas têm origem no século XVIII, com raízes na Europa. Os padres jesuítas trouxeram a tradição para o Brasil, e a Região Nordeste tornou essas festas muito populares. A quadrilha, dança típica, surgiu nos bailes franceses, migrando dos palácios para o campo.",
+      "origem_em_aracaju": "Os festejos juninos em Aracaju têm início documentado em 1910, na Rua São João, no Bairro Industrial. Começaram com um caráter religioso, com novenas realizadas por duas irmãs devotas de uma imagem de São João de Deus. Com o tempo, incorporaram elementos profanos como a dança, a alimentação e o forró.",
+      "evolucao": "Na década de 1950, surgiram as primeiras quadrilhas juninas organizadas na Rua São João. O Mestre Calazans foi figura central na organização dos festejos. Ao longo das décadas, os eventos cresceram em escala, atraindo artistas nacionais e se tornando referência cultural do Nordeste.",
+      "titulo_pais_do_forro": "Sergipe é reconhecido como o 'País do Forró', título consolidado pela tradição, pela qualidade dos festejos e pela música do cantor Rogério, cuja letra diz: 'Sergipe é o país do forró, tem moça bonita que só, quando chega o mês de junho, na rua de São João, o forró vai começar'."
+    },
+    "gastronomia_tipica": {
+      "descricao": "A gastronomia junina é parte fundamental das festividades, com pratos e quitutes à base de milho, coco e amendoim.",
+      "itens": [
+        {"nome": "Pamonha", "descricao": "Massa de milho verde cozida em palha de milho, doce ou salgada"},
+        {"nome": "Canjica", "descricao": "Milho branco cozido com leite de coco e açúcar"},
+        {"nome": "Milho cozido", "descricao": "Milho verde cozido em água e sal"},
+        {"nome": "Milho assado", "descricao": "Milho verde assado na brasa"},
+        {"nome": "Bolo de milho", "descricao": "Bolo feito com fubá ou milho verde"},
+        {"nome": "Munguzá", "descricao": "Canjica com leite de coco, típica do Nordeste"},
+        {"nome": "Pé de moleque", "descricao": "Doce de amendoim com rapadura"},
+        {"nome": "Amendoim cozido", "descricao": "Amendoim cozido com sal"},
+        {"nome": "Maçã do amor", "descricao": "Maçã coberta com calda de açúcar vermelha"},
+        {"nome": "Beiju", "descricao": "Tapioca fina assada na chapa"},
+        {"nome": "Arroz doce", "descricao": "Arroz cozido com leite e açúcar"},
+        {"nome": "Pipoca", "descricao": "Milho estourado, doce ou salgado"},
+        {"nome": "Algodão doce", "descricao": "Fios de açúcar colorido"},
+        {"nome": "Cocada", "descricao": "Doce de coco ralado com açúcar"}
+      ]
+    },
+    "elementos_culturais": [
+      {
+        "nome": "Quadrilha Junina",
+        "descricao": "Dança coletiva com figurinos elaborados, coreografias temáticas e narração de um marcador. Em Sergipe, as quadrilhas são altamente profissionalizadas e competem em concursos estaduais.",
+        "organizacao": "LIQUAJUSE — Liga das Quadrilhas Juninas de Aracaju e Sergipe"
+      },
+      {
+        "nome": "Forró Pé de Serra",
+        "descricao": "Ritmo tradicional nordestino tocado com sanfona (acordeon), zabumba e triângulo. É a espinha dorsal musical das festividades juninas sergipanas.",
+        "instrumentos": ["Sanfona (acordeon)", "Zabumba", "Triângulo"]
+      },
+      {
+        "nome": "Barco de Fogo",
+        "descricao": "Patrimônio Imaterial de Sergipe desde 2003, originário de Estância. Consiste em uma corrida com um objeto em chamas, acompanhada de fogos de artifício. Presente na Salva Junina em Aracaju.",
+        "origem": "Estância, SE",
+        "reconhecimento": "Patrimônio Imaterial de Sergipe desde 2003"
+      },
+      {
+        "nome": "Casamento Caipira",
+        "descricao": "Encenação humorística de um casamento no estilo caipira nordestino, com noivos, padrinhos e convidados fantasiados. Na Rua São João, é uma das atrações mais tradicionais."
+      },
+      {
+        "nome": "Fogueira de São João",
+        "descricao": "Fogueiras acesas na noite de 23 para 24 de junho, em homenagem a São João Batista. Tradição que remete às origens europeias das festas juninas."
+      },
+      {
+        "nome": "Rei e Rainha do País do Forró",
+        "descricao": "Título honorífico concedido a um casal que representa a cultura junina sergipana durante o ciclo. A coroação ocorre na Salva Junina."
+      }
+    ],
+    "santos_juninos": [
+      {
+        "nome": "Santo Antônio",
+        "data_festejo": "13 de junho",
+        "descricao": "Padroeiro dos namorados e dos casamentos. Inicia o ciclo dos santos juninos."
+      },
+      {
+        "nome": "São João",
+        "data_festejo": "24 de junho",
+        "descricao": "O mais importante dos santos juninos, cujo dia é o ponto alto das festividades. Homenageado com fogueiras, forró e quadrilhas."
+      },
+      {
+        "nome": "São Pedro",
+        "data_festejo": "29 de junho",
+        "descricao": "Padroeiro dos pescadores. Encerra o ciclo dos três santos juninos."
+      }
+    ]
+  },
+  "turismo": {
+    "descricao": "Aracaju recebe turistas de todo o Brasil e do exterior durante o período junino. A Orla da Atalaia é considerada uma das mais bem equipadas do Brasil.",
+    "atrações_complementares": [
+      {
+        "nome": "Orla da Atalaia",
+        "descricao": "Orla marítima com quiosques, restaurantes, parques e infraestrutura turística de alto padrão."
+      },
+      {
+        "nome": "Centro de Artesanato Chica Chaves",
+        "descricao": "Espaço dedicado ao artesanato sergipano, com peças de renda, cerâmica e outros produtos locais."
+      },
+      {
+        "nome": "Mercados Centrais de Aracaju",
+        "descricao": "Mercados históricos no centro da cidade, com gastronomia local e artesanato."
+      }
+    ],
+    "infraestrutura": {
+      "aeroporto": "Aeroporto Internacional de Aracaju — Santa Maria (AJU)",
+      "marinete_do_forro": "Receptivo turístico no aeroporto e em pontos estratégicos da cidade durante o período junino."
+    }
+  }
+}

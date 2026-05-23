@@ -1,3 +1,7 @@
+# AI / editor tooling
+.claude/
+client/public/__manus__/
+
 # Dependencies
 node_modules/
 

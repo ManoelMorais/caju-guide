@@ -49,6 +49,24 @@ const posFesta: Record<string, { nome: string; tipo: string; distancia: string; 
   ],
 };
 
+// Mapeamento de show → evento
+const showEvento: Record<number, string> = {
+  1: "Arraiá do Povo",
+  2: "Arraiá do Povo",
+  3: "Arraiá do Povo",
+  4: "Forró Caju",
+  5: "Forró Caju",
+  6: "Forró Caju",
+  7: "Forró Caju",
+  8: "Forró Caju",
+  9: "Forró Caju",
+  10: "Forró Caju",
+  11: "Forró Caju",
+  12: "Forró Caju",
+  13: "Forró Caju",
+  14: "Segundona do Turista",
+};
+
 // Programação real do ciclo junino 2026 — fontes: FUNCAP / FUNCAJU
 const programacao = [
   // — ARRAIÁ DO POVO — Orla da Atalaia (29/Mai–28/Jun)
@@ -436,9 +454,14 @@ function ShowCard({ show, isFav, onToggleFav }: {
               {show.acessivel && (
                 <span className="badge badge--acessivel">♿ Acessível</span>
               )}
+              {"libras" in show && show.libras && (
+                <span className="badge" style={{ background: "rgba(59,130,246,0.15)", color: "#3B82F6" }}>
+                  🤟 Libras
+                </span>
+              )}
             </div>
             <h3 className="text-base font-bold leading-tight"
-              style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}>
+                style={{ fontFamily: "var(--font-serif)", color: "var(--foreground)" }}>
               {show.artista}
             </h3>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted-foreground)" }}>
@@ -507,7 +530,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
 
               {/* Dicas neurodivergência */}
               <div className="rounded-xl p-3 space-y-2"
-                style={{ background: "rgba(107,79,160,0.08)", border: "1px solid rgba(107,79,160,0.2)" }}>
+                   style={{ background: "rgba(107,79,160,0.08)", border: "1px solid rgba(107,79,160,0.2)" }}>
                 <div className="flex items-center gap-2 mb-2">
                   <Brain size={14} style={{ color: "#A78BCA" }} />
                   <span className="text-xs font-semibold" style={{ color: "#A78BCA" }}>
@@ -517,14 +540,14 @@ function ShowCard({ show, isFav, onToggleFav }: {
                 {show.dicas.neuro.map((dica, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
-                      style={{ background: "#7B5CB8" }} />
+                         style={{ background: "#7B5CB8" }} />
                     <span className="text-xs leading-relaxed" style={{ color: "var(--foreground)" }}>
                       {dica}
                     </span>
                   </div>
                 ))}
                 <div className="flex items-center gap-1.5 mt-2 pt-2"
-                  style={{ borderTop: "1px solid rgba(107,79,160,0.15)" }}>
+                     style={{ borderTop: "1px solid rgba(107,79,160,0.15)" }}>
                   <Users size={11} className="label-muted" />
                   <span className="text-[11px] label-muted">Capacidade: {show.dicas.capacidade}</span>
                 </div>
@@ -561,7 +584,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
                         <div className="mt-2 space-y-2">
                           {posShowBairro.map((local, i) => (
                             <div key={i} className="flex items-center gap-3 p-2.5 rounded-xl"
-                              style={{ background: "var(--secondary)", border: "1px solid var(--border)" }}>
+                                 style={{ background: "var(--secondary)", border: "1px solid var(--border)" }}>
                               <span className="text-base">{local.emoji}</span>
                               <div className="flex-1 min-w-0">
                                 <p className="text-xs font-semibold" style={{ color: "var(--foreground)" }}>
@@ -572,7 +595,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
                                 </p>
                               </div>
                               <span className="text-[11px] font-bold flex-shrink-0"
-                                style={{ color: "#E8521A" }}>
+                                    style={{ color: "#E8521A" }}>
                                 ⭐ {local.nota}
                               </span>
                             </div>
@@ -592,6 +615,7 @@ function ShowCard({ show, isFav, onToggleFav }: {
 }
 
 export default function Home() {
+  const [eventoAtivo, setEventoAtivo] = useState("Todos");
   const [bairroAtivo, setBairroAtivo] = useState("Todos");
   const [apenasAcessivel, setApenasAcessivel] = useState(false);
   const [apenasBaixaEstimulacao, setApenasBaixaEstimulacao] = useState(false);
@@ -615,10 +639,11 @@ export default function Home() {
   }, [favoritos, addNotification, marcarComoNotificado]);
 
   const programacaoFiltrada = programacao.filter((item) => {
+    const eventoOk = eventoAtivo === "Todos" || showEvento[item.id] === eventoAtivo;
     const bairroOk = bairroAtivo === "Todos" || item.bairro === bairroAtivo;
     const acessivelOk = !apenasAcessivel || item.acessivel;
     const baixaEstimulacaoOk = !apenasBaixaEstimulacao || item.lotacao === "baixa";
-    return bairroOk && acessivelOk && baixaEstimulacaoOk;
+    return eventoOk && bairroOk && acessivelOk && baixaEstimulacaoOk;
   });
 
   return (
@@ -639,7 +664,7 @@ export default function Home() {
             </span>
           </div>
           <h1 className="text-3xl font-bold text-white leading-tight"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}>
+              style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}>
             Forró Caju 2026
           </h1>
           <p className="text-white/75 text-sm mt-0.5">
@@ -650,35 +675,55 @@ export default function Home() {
 
       {/* Filtros */}
       <div className="px-4 pt-4 pb-2">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="section-title text-lg">Programação — Ciclo Junino 2026</h2>
-          <div className="flex items-center gap-2">
+        <h2 className="section-title text-lg mb-3">Programação — Ciclo Junino 2026</h2>
+
+        {/* Filtro por tipo de evento */}
+        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide mb-2">
+          {eventos.map((ev) => (
             <button
-              onClick={() => setApenasBaixaEstimulacao(!apenasBaixaEstimulacao)}
-              aria-pressed={apenasBaixaEstimulacao}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200"
+              key={ev.id}
+              onClick={() => setEventoAtivo(ev.id)}
+              aria-pressed={eventoAtivo === ev.id}
+              className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200"
               style={{
-                background: apenasBaixaEstimulacao ? "#7B5CB8" : "rgba(107,79,160,0.12)",
-                color: apenasBaixaEstimulacao ? "white" : "#A78BCA",
-              }}
-              title="Filtra shows com baixa estimulação sensorial — ideal para autismo e hipersensibilidade"
-            >
-              <Brain size={12} />
-              <span>Tranquilo</span>
-            </button>
-            <button
-              onClick={() => setApenasAcessivel(!apenasAcessivel)}
-              aria-pressed={apenasAcessivel}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200"
-              style={{
-                background: apenasAcessivel ? "#3A9E68" : "rgba(46,125,82,0.12)",
-                color: apenasAcessivel ? "white" : "#2E7D52",
+                background: eventoAtivo === ev.id ? "#E8521A" : "var(--card)",
+                color: eventoAtivo === ev.id ? "white" : "var(--foreground)",
+                border: `1.5px solid ${eventoAtivo === ev.id ? "#E8521A" : "var(--border)"}`,
               }}
             >
-              <Accessibility size={12} />
-              <span>Acessível</span>
+              <span>{ev.emoji}</span>
+              <span>{ev.label}</span>
             </button>
-          </div>
+          ))}
+        </div>
+
+        {/* Filtros de acessibilidade */}
+        <div className="flex items-center gap-2 mb-3">
+          <button
+            onClick={() => setApenasBaixaEstimulacao(!apenasBaixaEstimulacao)}
+            aria-pressed={apenasBaixaEstimulacao}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200"
+            style={{
+              background: apenasBaixaEstimulacao ? "#7B5CB8" : "rgba(107,79,160,0.12)",
+              color: apenasBaixaEstimulacao ? "white" : "#A78BCA",
+            }}
+            title="Filtra shows com baixa estimulação sensorial — ideal para autismo e hipersensibilidade"
+          >
+            <Brain size={12} />
+            <span>Tranquilo</span>
+          </button>
+          <button
+            onClick={() => setApenasAcessivel(!apenasAcessivel)}
+            aria-pressed={apenasAcessivel}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200"
+            style={{
+              background: apenasAcessivel ? "#3A9E68" : "rgba(46,125,82,0.12)",
+              color: apenasAcessivel ? "white" : "#2E7D52",
+            }}
+          >
+            <Accessibility size={12} />
+            <span>Acessível</span>
+          </button>
         </div>
 
         {/* Aviso neurodivergência */}
@@ -698,7 +743,7 @@ export default function Home() {
 
         {/* Filtro por bairro */}
         <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-          {bairros.map((b) => (
+          {locais.map((b) => (
             <button
               key={b}
               onClick={() => setBairroAtivo(b)}
